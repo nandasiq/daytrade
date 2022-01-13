@@ -1,8 +1,10 @@
 textarea{
     width:100%;
-    border-radius: 10px;
-    border: 1px solid
+    border-radius: 2px;
+    resize: auto !important;
+
 }
+
 
 #inputGroup-sizing-default.areatextneg.input-group-text{
     width:100%;
@@ -15,3 +17,4 @@ textarea{
     background-color: green;
     color: #fff
 }
+
