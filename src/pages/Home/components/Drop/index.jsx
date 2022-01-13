@@ -1,5 +1,6 @@
 import React from 'react';
 import Accordion from 'react-bootstrap/Accordion';
+import Dash from '../Dash'
 
 
 
@@ -7,9 +8,9 @@ const Drop = () => {
   return (
     <Accordion defaultActiveKey={['0']} alwaysOpen>
     <Accordion.Item eventKey="0">
-      <Accordion.Header>Dia 12/01/2021</Accordion.Header>
+      <Accordion.Header>Preencher</Accordion.Header>
       <Accordion.Body>
-          Dados do dia.
+          <Dash />
       </Accordion.Body>
     </Accordion.Item>
     <Accordion.Item eventKey="1">

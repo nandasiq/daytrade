@@ -1,0 +1,17 @@
+textarea{
+    width:100%;
+    border-radius: 10px;
+    border: 1px solid
+}
+
+#inputGroup-sizing-default.areatextneg.input-group-text{
+    width:100%;
+    background-color: red;
+    color: #fff
+}
+
+#inputGroup-sizing-default.areatextpos.input-group-text{
+    width:100%;
+    background-color: green;
+    color: #fff
+}
