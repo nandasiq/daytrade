@@ -15,3 +15,43 @@ html, body{
 .root{
     background-color: #0e0d0df1;
 }
+
+.accordion-body , .accordion-item, .accordion-header, 
+.accordion-button, .accordion-collapse.collapse, .accordion-item:first-of-type{
+    background-color: #05050555 !important;
+    color: #fff;
+}
+
+textarea{
+    background-color: #21252900 ;
+    color: #fff;
+}
+
+div.card{
+    background-color: #21252900 ;
+}
+
+input.form-control{
+    background-color: #2125295e ;
+    color: #fff;
+}
+
+span#inputGroup-sizing-default.input-group-text{
+    background-color: #2125295e ;
+    color: #fff;
+}
+
+button.accordion-button{
+        background-color: #2125295e !important;
+        color: #fff !important;
+}
+
+button.accordion-button.collapsed{        
+    background-color: #2125295e !important;
+    color: #fff ;
+}
+
+h2.accordion-header{        
+    background-color: #c0bbbb5e !important;
+    color: #fff ;
+}

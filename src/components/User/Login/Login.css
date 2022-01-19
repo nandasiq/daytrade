@@ -1,5 +1,5 @@
 .user-login {
-    background-color: rgba(255, 255, 255, 0.822);
+  background-color: #585b66b0;
     max-width: 400px;
     margin-top: 8%;
     margin-left: 32%;
@@ -9,7 +9,7 @@
   
   .user-login__title {
     font-size: 40px;
-    color: #376daa;
+    color: #f8f8f8;
     margin-bottom: 50px;
     text-align: center;
   }
@@ -22,7 +22,7 @@
   
   .user-login__form-control label {
     margin-bottom: 5px;
-    color: #292828;
+    color: #f8f5f5;
     font-size: 16px;
   }
   
@@ -49,6 +49,4 @@
       padding: 30px
     }
     
-
-
   }

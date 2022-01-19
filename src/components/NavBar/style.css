@@ -1,0 +1,9 @@
+.button-logout{
+    background-color: #1b1a1a59;;
+    border: none;
+    color: #fff;
+}
+
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark{
+    background-color: #1b1a1a59 !important;
+}
