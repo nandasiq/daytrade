@@ -79,7 +79,7 @@ class Dash extends React.Component {
 
         axios({
             method: 'put',
-            url: Api + 'items' ,
+            url: Api + '/items' ,
             data: {
                 id          :   id,
                 capital     :   capital,
@@ -112,13 +112,24 @@ class Dash extends React.Component {
         const {  id, capital , data , delta , user , meta , metaloss , pobservacao , poperacao , resultado   } = this.state
         return (
             <>
-
+            <div id="area">
+             <form>
                 <CardGroup>
                     <Card>
                         <InputGroup className="mb-3">
                             <InputGroup.Text id="inputGroup-sizing-default">Data</InputGroup.Text>
                             <FormControl
+                                value={data} onChange={this.handleChangeData}
                                 aria-label="Data"
+                                aria-describedby="inputGroup-sizing-default"
+                            />
+                        </InputGroup>
+                        <br />
+                        <InputGroup className="mb-3">
+                            <InputGroup.Text id="inputGroup-sizing-default">Id</InputGroup.Text>
+                            <FormControl
+                                value={id} onChange={this.handleChangeId}
+                                aria-label="Id"
                                 aria-describedby="inputGroup-sizing-default"
                             />
                         </InputGroup>
@@ -126,7 +137,53 @@ class Dash extends React.Component {
                         <InputGroup className="mb-3">
                             <InputGroup.Text id="inputGroup-sizing-default">Meta</InputGroup.Text>
                             <FormControl
+                                value={meta} onChange={this.handleChangeMeta}
                                 aria-label="Meta"
+                                aria-describedby="inputGroup-sizing-default"
+                            />
+                        </InputGroup>
+                        <br />
+                        <InputGroup className="mb-3">
+                            <InputGroup.Text id="inputGroup-sizing-default">Capital</InputGroup.Text>
+                            <FormControl
+                                value={capital} onChange={this.handleChangeCapital}
+                                aria-label="Capital"
+                                aria-describedby="inputGroup-sizing-default"
+                            />
+                        </InputGroup>
+                        <br />
+                        <InputGroup className="mb-3">
+                            <InputGroup.Text id="inputGroup-sizing-default"> Delta </InputGroup.Text>
+                            <FormControl
+                                value={delta} onChange={this.handleChangeDelta}
+                                aria-label="Delta"
+                                aria-describedby="inputGroup-sizing-default"
+                            />
+                        </InputGroup>
+                        <br />
+                        <InputGroup className="mb-3">
+                            <InputGroup.Text id="inputGroup-sizing-default">User</InputGroup.Text>
+                            <FormControl
+                                value={user} onChange={this.handleChangeUser}
+                                aria-label="User"
+                                aria-describedby="inputGroup-sizing-default"
+                            />
+                        </InputGroup>
+                        <br />
+                        <InputGroup className="mb-3">
+                            <InputGroup.Text id="inputGroup-sizing-default">Meta Loss</InputGroup.Text>
+                            <FormControl
+                                value={metaloss} onChange={this.handleChangeMetaLoss}
+                                aria-label="Meta-loss"
+                                aria-describedby="inputGroup-sizing-default"
+                            />
+                        </InputGroup>
+                        <br />
+                        <InputGroup className="mb-3">
+                            <InputGroup.Text id="inputGroup-sizing-default">Resultado</InputGroup.Text>
+                            <FormControl
+                                value={resultado} onChange={this.handleChangeResultado}
+                                aria-label="Resultado"
                                 aria-describedby="inputGroup-sizing-default"
                             />
                         </InputGroup>
@@ -134,17 +191,22 @@ class Dash extends React.Component {
                     </Card>
                     <Card>
                         <InputGroup className="mb-3">
-                            <InputGroup.Text id="inputGroup-sizing-default" className='areatextpos'>Pontos positivos</InputGroup.Text>
-                            <textarea label="Pontos negativos"></textarea>
+                            <InputGroup.Text id="inputGroup-sizing-default" className='areatextpos'>Pontos de Observação</InputGroup.Text>
+                            <textarea  value={pobservacao} onChange={this.handleChangePObervacao}label="Pontos negativos"></textarea>
                         </InputGroup>
                         <br />
 
                         <InputGroup className="mb-3">
-                            <InputGroup.Text id="inputGroup-sizing-default" className='areatextneg'>Pontos negativos</InputGroup.Text>
-                            <textarea label="Pontos negativos"></textarea>
+                            <InputGroup.Text id="inputGroup-sizing-default" className='areatextneg'>Pontos de Operação</InputGroup.Text>
+                            <textarea value={poperacao} onChange={this.handleChangePOperacao} label="Pontos negativos"></textarea>
                         </InputGroup>
                     </Card>
+                     <button type="submit" value="enviar">
+                      SEND
+                    </button>
                 </CardGroup>
+                </form>
+                </div>
             </>
 
 
