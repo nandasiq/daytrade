@@ -48,7 +48,7 @@ const UserLogin = () => {
 
   return (
     <div className="user-login">
-      <h1 className="user-login__title">Acessar o Sistema</h1>
+      <h1 className="user-login__title">Diary Day Trade AFT</h1>
       <form onSubmit={onSubmit}>
         <div className="user-login__form-control">
           <label htmlFor="user">Usuário</label>
