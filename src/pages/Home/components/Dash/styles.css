@@ -18,7 +18,8 @@ textarea{
     background-color: red;
     color: #fff;
     border-top-left-radius: 4px !important; 
-    border-top-right-radius: 4px !important; 
+    border-top-right-radius: 4px !important;
+    border-bottom-left-radius: 0% !important; 
 }
 
 #inputGroup-sizing-default.areatextpos.input-group-text{
@@ -26,7 +27,8 @@ textarea{
     background-color: green;
     color: #fff;
     border-top-left-radius: 4px !important; 
-    border-top-right-radius: 4px !important; 
+    border-top-right-radius: 4px !important;
+    border-bottom-left-radius: 0% !important; 
 }
 
 
@@ -52,5 +54,10 @@ span#inputGroup-sizing-default.input-group-text{
 
 .card{
     padding: 10px;
+    justify-content: space-between;
 }
 
+.campos{
+    height: 460px;
+    padding-bottom: 0px !important;
+}

@@ -112,12 +112,13 @@ class Dash extends React.Component {
             <div className='area' id="area">
                 <form onSubmit={this.handleSubmit} id="formulario">
                     <CardGroup>
-                        <Card>
+                        <Card className="campos">
                             <InputGroup className="mb-3">
                                 <InputGroup.Text id="inputGroup-sizing-default">Data</InputGroup.Text>
                                 <FormControl
                                     id='data'
                                     name='data'
+                                    type='date'
                                     value={data} onChange={this.handleChangeData}
                                     aria-label="Data"
                                     aria-describedby="inputGroup-sizing-default"
