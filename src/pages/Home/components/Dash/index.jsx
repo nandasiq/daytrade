@@ -217,7 +217,7 @@ class Dash extends React.Component {
                             <textarea id='poperacao' name='poperacao'value={poperacao} onChange={this.handleChangePOperacao} label="Pontos negativos"></textarea>
                         </InputGroup>
                     </Card>
-                     <button type="submit" value="enviar">
+                     <button type="submit" value="enviar" className="buttonForm">
                       SEND
                     </button>
                 </CardGroup>

@@ -2,6 +2,7 @@ textarea{
     width:100%;
     border-radius: 2px;
     resize: auto !important;
+    min-height: 235px;
 
 }
 
@@ -18,3 +19,14 @@ textarea{
     color: #fff
 }
 
+
+span#inputGroup-sizing-default.input-group-text{
+    min-width: 90px;
+}
+
+.buttonForm{
+    background-color: #b38808 ;
+    color: #fff;
+    border: none;
+    max-height: 92.5vh;
+}
