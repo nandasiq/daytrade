@@ -112,7 +112,7 @@ class Dash extends React.Component {
         const {  id, capital , data , delta , user , meta , metaloss , pobservacao , poperacao , resultado   } = this.state
         return (
 
-            <div id="area">
+            <div className='area' id="area">
             <form onSubmit={this.handleSubmit} id="formulario">
                <CardGroup>
                     <Card>
