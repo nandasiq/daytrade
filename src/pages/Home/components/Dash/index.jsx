@@ -79,7 +79,7 @@ class Dash extends React.Component {
 
         axios({
             method: 'put',
-            url: Api + '/items' ,
+            url: Api,
             data: {
                 id          :   id,
                 capital     :   capital,
@@ -111,14 +111,16 @@ class Dash extends React.Component {
     render() {
         const {  id, capital , data , delta , user , meta , metaloss , pobservacao , poperacao , resultado   } = this.state
         return (
-            <>
+
             <div id="area">
-             <form>
-                <CardGroup>
+            <form onSubmit={this.handleSubmit} id="formulario">
+               <CardGroup>
                     <Card>
                         <InputGroup className="mb-3">
                             <InputGroup.Text id="inputGroup-sizing-default">Data</InputGroup.Text>
                             <FormControl
+                                id='data'
+                                name='data'
                                 value={data} onChange={this.handleChangeData}
                                 aria-label="Data"
                                 aria-describedby="inputGroup-sizing-default"
@@ -128,6 +130,8 @@ class Dash extends React.Component {
                         <InputGroup className="mb-3">
                             <InputGroup.Text id="inputGroup-sizing-default">Id</InputGroup.Text>
                             <FormControl
+                                id='id'
+                                name='id'
                                 value={id} onChange={this.handleChangeId}
                                 aria-label="Id"
                                 aria-describedby="inputGroup-sizing-default"
@@ -137,6 +141,8 @@ class Dash extends React.Component {
                         <InputGroup className="mb-3">
                             <InputGroup.Text id="inputGroup-sizing-default">Meta</InputGroup.Text>
                             <FormControl
+                                id='meta'
+                                name='meta'
                                 value={meta} onChange={this.handleChangeMeta}
                                 aria-label="Meta"
                                 aria-describedby="inputGroup-sizing-default"
@@ -146,6 +152,8 @@ class Dash extends React.Component {
                         <InputGroup className="mb-3">
                             <InputGroup.Text id="inputGroup-sizing-default">Capital</InputGroup.Text>
                             <FormControl
+                                id='capital'
+                                name='capital'
                                 value={capital} onChange={this.handleChangeCapital}
                                 aria-label="Capital"
                                 aria-describedby="inputGroup-sizing-default"
@@ -155,6 +163,8 @@ class Dash extends React.Component {
                         <InputGroup className="mb-3">
                             <InputGroup.Text id="inputGroup-sizing-default"> Delta </InputGroup.Text>
                             <FormControl
+                                id='delta'
+                                name='delta'
                                 value={delta} onChange={this.handleChangeDelta}
                                 aria-label="Delta"
                                 aria-describedby="inputGroup-sizing-default"
@@ -164,6 +174,8 @@ class Dash extends React.Component {
                         <InputGroup className="mb-3">
                             <InputGroup.Text id="inputGroup-sizing-default">User</InputGroup.Text>
                             <FormControl
+                                id='user'
+                                name='user'
                                 value={user} onChange={this.handleChangeUser}
                                 aria-label="User"
                                 aria-describedby="inputGroup-sizing-default"
@@ -173,6 +185,8 @@ class Dash extends React.Component {
                         <InputGroup className="mb-3">
                             <InputGroup.Text id="inputGroup-sizing-default">Meta Loss</InputGroup.Text>
                             <FormControl
+                                id='metaloss'
+                                name='metaloss'
                                 value={metaloss} onChange={this.handleChangeMetaLoss}
                                 aria-label="Meta-loss"
                                 aria-describedby="inputGroup-sizing-default"
@@ -182,6 +196,8 @@ class Dash extends React.Component {
                         <InputGroup className="mb-3">
                             <InputGroup.Text id="inputGroup-sizing-default">Resultado</InputGroup.Text>
                             <FormControl
+                                id='resultado'
+                                name='resultado'
                                 value={resultado} onChange={this.handleChangeResultado}
                                 aria-label="Resultado"
                                 aria-describedby="inputGroup-sizing-default"
@@ -192,13 +208,13 @@ class Dash extends React.Component {
                     <Card>
                         <InputGroup className="mb-3">
                             <InputGroup.Text id="inputGroup-sizing-default" className='areatextpos'>Pontos de Observação</InputGroup.Text>
-                            <textarea  value={pobservacao} onChange={this.handleChangePObervacao}label="Pontos negativos"></textarea>
+                            <textarea id='pobservacao' name='pobservacao' value={pobservacao} onChange={this.handleChangePObervacao}label="Pontos negativos"></textarea>
                         </InputGroup>
                         <br />
 
                         <InputGroup className="mb-3">
                             <InputGroup.Text id="inputGroup-sizing-default" className='areatextneg'>Pontos de Operação</InputGroup.Text>
-                            <textarea value={poperacao} onChange={this.handleChangePOperacao} label="Pontos negativos"></textarea>
+                            <textarea id='poperacao' name='poperacao'value={poperacao} onChange={this.handleChangePOperacao} label="Pontos negativos"></textarea>
                         </InputGroup>
                     </Card>
                      <button type="submit" value="enviar">
@@ -206,8 +222,7 @@ class Dash extends React.Component {
                     </button>
                 </CardGroup>
                 </form>
-                </div>
-            </>
+            </div>
 
 
         );
